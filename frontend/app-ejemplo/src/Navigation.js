@@ -10,6 +10,8 @@ import Pdf from "./screen/Pdf";
 import Traductor from "./screen/Traductor";
 import TextoBinario from "./screen/TextoBinario";
 import Contador from "./screen/Contador";
+import HTML from "./screen/HTML";
+import XML from "./screen/XML";
 
 const Tab = createBottomTabNavigator()
 
@@ -62,6 +64,18 @@ const Navigation = () => {
                 tabBarLabel: 'Contar Vocales',
                 tabBarIcon: ({color, size}) => (
                     <MaterialCommunityIcons name={'file-pdf-box'} color={color} size={size}/>
+                )
+            }}/>
+            <Tab.Screen name={'HTML'} component={HTML} options={{
+                tabBarLabel: 'HTML',
+                tabBarIcon: ({color, size}) => (
+                    <MaterialCommunityIcons name={'file'} color={color} size={size}/>
+                )
+            }}/>
+            <Tab.Screen name={'XML'} component={XML} options={{
+                tabBarLabel: 'XML',
+                tabBarIcon: ({color, size}) => (
+                    <MaterialCommunityIcons name={'file'} color={color} size={size}/>
                 )
             }}/>
         </Tab.Navigator>
